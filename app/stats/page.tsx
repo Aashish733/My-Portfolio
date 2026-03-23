@@ -1,21 +1,21 @@
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 import {
   PageHeader,
   PageHeaderDescription,
   PageHeaderHeading,
-} from "@/components/page-header";
-import { getViewsServerAction } from "../actions/getAndSetViewsServerAction";
-import { getLoveCountServerAction } from "../actions/getAndSetLoveCountServerAction";
-import LoveButtonComponent from "./LoveButtonComponent";
-import { getGitHubStatsServerAction } from "../actions/getGitHubStatsServerAction";
-import GitHubGraphs from "./GitHubGraphs";
-import Pager from "@/components/pager";
+} from '@/components/page-header';
+import { getViewsServerAction } from '../actions/getAndSetViewsServerAction';
+import { getLoveCountServerAction } from '../actions/getAndSetLoveCountServerAction';
+import LoveButtonComponent from './LoveButtonComponent';
+import { getGitHubStatsServerAction } from '../actions/getGitHubStatsServerAction';
+import GitHubGraphs from './GitHubGraphs';
+import Pager from '@/components/pager';
 
 const StatCard = ({
   title,
   value,
-  className = "",
+  className = '',
 }: {
   title: string;
   value: string | number;
@@ -40,38 +40,33 @@ const Stats = async () => {
   const loveCount = await getLoveCountServerAction();
   const githubStats = await getGitHubStatsServerAction();
 
-  const githubStatCards: GitHubStatCard[] = [
-  {
-    title: 'Hireable',
-    value:
-      githubStats.hireable === true
-        ? 'Yes'
-        : githubStats.hireable === false
-        ? 'No'
-        : 'Not Available',
-    className: githubStats.hireable ? 'bg-green-500/20' : '',
-  },
-  {
-    title: 'Total Public Repositories',
-    value: githubStats.public_repos ?? 'Not Available',
-  },
-  {
-    title: 'Followers',
-    value: githubStats.followers ?? 'Not Available',
-  },
-  {
-    title: 'Following',
-    value: githubStats.following ?? 'Not Available',
-  },
-  {
-    title: 'Current Company',
-    value: githubStats.company ?? 'Not Available',
-  },
-  {
-    title: 'Location',
-    value: githubStats.location ?? 'Not Available',
-  },
-];
+  const githubStatCards = [
+    {
+      title: 'Hireable',
+      value: githubStats.hireable && 'Yes',
+      className: githubStats.hireable && 'bg-green-500/20',
+    },
+    {
+      title: 'Total Public Repositories',
+      value: githubStats.public_repos,
+    },
+    {
+      title: 'Followers',
+      value: githubStats.followers,
+    },
+    {
+      title: 'Following',
+      value: githubStats.following,
+    },
+    {
+      title: 'Current Company',
+      value: githubStats.company,
+    },
+    {
+      title: 'Location',
+      value: githubStats.location,
+    },
+  ];
 
   return (
     <>
@@ -188,7 +183,7 @@ const Stats = async () => {
             <StatCard
               key={index}
               title={card.title}
-              value={card.value || 'Not Available'}
+              value={card.value || 'Limit Reached'}
               className={card.className}
             />
           ))}
