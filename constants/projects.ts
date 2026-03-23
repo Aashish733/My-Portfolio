@@ -1,17 +1,35 @@
-export const projects = [
+type Project = {
+  title: string;
+  slug: string;
+  tagline: string;
+  overview: string;
+  techStack: string[];
+  features: string[];
+  challenges: string[]; // ✅ required everywhere
+  links: {
+    github: string;
+    live?: string; // ✅ optional
+  };
+};
+
+export const projects: Project[] = [
   {
     title: 'AI Social Media App (MERN)',
     slug: 'mern-socialmedia',
     tagline:
       'A full-stack AI-powered social media platform built with the MERN stack.',
     overview:
-      'A scalable social media application with authentication, post creation, real-time interactions, and AI-powered features. Built using MongoDB, Express, React, and Node.js.',
+      'A scalable social media application with authentication, post creation, real-time interactions, and AI-powered features.',
     techStack: ['MongoDB', 'Express.js', 'React', 'Node.js'],
     features: [
       'User authentication & authorization',
       'Create, like, and comment on posts',
       'AI-powered content features',
       'Responsive UI',
+    ],
+    challenges: [
+      'Handling real-time updates efficiently',
+      'Scaling MongoDB queries',
     ],
     links: {
       github: 'https://github.com/your-username/MERN-socialmedia',
@@ -22,13 +40,16 @@ export const projects = [
     title: 'NextJob | AI Job Board',
     slug: 'nextjob',
     tagline: 'An AI-powered job board platform built with Next.js.',
-    overview:
-      'A modern job board platform that integrates AI features for job recommendations and user interaction. Built with Next.js and modern full-stack tools.',
+    overview: 'A modern job board platform with AI-driven job recommendations.',
     techStack: ['Next.js', 'Node.js', 'MongoDB'],
     features: [
       'AI-powered job recommendations',
       'User authentication',
       'Dynamic job listings',
+    ],
+    challenges: [
+      'Implementing AI recommendations',
+      'Optimizing search & filtering',
     ],
     links: {
       github: 'https://github.com/your-username/NextJob',
@@ -40,12 +61,16 @@ export const projects = [
     slug: 'doctor-app',
     tagline: 'A MERN stack app for booking and managing doctor appointments.',
     overview:
-      'A complete healthcare booking platform where users can schedule appointments, manage bookings, and interact with doctors.',
+      'A healthcare booking platform for scheduling and managing appointments.',
     techStack: ['MongoDB', 'Express.js', 'React', 'Node.js'],
     features: [
       'Appointment booking system',
       'User authentication',
       'Admin panel',
+    ],
+    challenges: [
+      'Managing time-slot conflicts',
+      'Handling real-time availability',
     ],
     links: {
       github:
@@ -58,16 +83,17 @@ export const projects = [
     slug: 'ecommerce',
     tagline: 'A full-stack eCommerce platform with cart and payment features.',
     overview:
-      'A scalable eCommerce application with product management, cart system, and order handling.',
+      'A scalable eCommerce application with product management and order handling.',
     techStack: ['React', 'Node.js', 'MongoDB/PostgreSQL'],
     features: [
       'Product listing & filtering',
       'Cart & checkout',
       'Order management',
     ],
+    challenges: ['Payment gateway integration', 'Handling concurrent orders'],
     links: {
-      live: "",
       github: 'https://github.com/your-username/PERN-ecommerce',
+      // live optional — add only if you have
     },
   },
 
@@ -75,16 +101,18 @@ export const projects = [
     title: 'URL Shortener',
     slug: 'url-shortener',
     tagline: 'A simple and efficient URL shortening service.',
-    overview:
-      'A backend-focused project that converts long URLs into short links with redirection support.',
+    overview: 'Converts long URLs into short links with fast redirection.',
     techStack: ['Node.js', 'Express', 'MongoDB'],
     features: [
       'Generate short URLs',
       'Redirection system',
       'Lightweight and fast',
     ],
+    challenges: [
+      'Ensuring unique short IDs',
+      'Handling high traffic redirects',
+    ],
     links: {
-      live:"",
       github: 'https://github.com/your-username/url-shortner',
     },
   },
@@ -93,12 +121,11 @@ export const projects = [
     title: 'DeepSeek Clone (AI Project)',
     slug: 'deepseek-clone',
     tagline: 'An AI-based application inspired by DeepSeek.',
-    overview:
-      'An experimental AI project showcasing integration of AI APIs with modern frontend frameworks.',
+    overview: 'An experimental AI project integrating APIs with modern UI.',
     techStack: ['TypeScript', 'Next.js', 'AI APIs'],
     features: ['AI response generation', 'Modern UI', 'API integration'],
+    challenges: ['Managing API latency', 'Handling streaming AI responses'],
     links: {
-      live: "",
       github: 'https://github.com/your-username/deepSeek-clone',
     },
   },
