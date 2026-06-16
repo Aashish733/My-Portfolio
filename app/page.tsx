@@ -16,14 +16,10 @@ const IntroductionPage = async () => {
       <PageHeader>
         <PageHeaderHeading>Aashish Kumar</PageHeaderHeading>
         <PageHeaderHeading className="mt-2 text-muted-foreground">
-          A coder by day, problem-solver by night!
+          Full-Stack Developer | MERN & Next.js | DevOps Enthusiast
         </PageHeaderHeading>
         <PageHeaderDescription>
-          I am a dedicated Software Engineer specializing in full-stack
-          application development. I enjoy crafting responsive web solutions
-          using modern technologies like Next.js, React, Tailwind CSS, Node.js,
-          Express, and MongoDB, while also applying DevOps practices, continuously
-          aiming to deliver high-quality, comprehensive, user-centric software solutions.
+          I build modern, scalable, and production-ready web applications using Next.js, React, TypeScript, Node.js, Express, MongoDB, and PostgreSQL. Passionate about clean architecture, performance optimization, and DevOps practices, I enjoy transforming complex problems into intuitive user experiences while continuously learning cloud technologies, Docker, CI/CD, and system design.
         </PageHeaderDescription>
         <PageActions>
           <Button asChild size="sm" className="rounded-md">

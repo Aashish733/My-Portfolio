@@ -5,7 +5,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from '@/components/page-header';
-import { getViewsServerAction } from '../actions/getAndSetViewsServerAction';
+import { getViewsServerAction, setViewsServerAction } from '../actions/getAndSetViewsServerAction';
 import { getLoveCountServerAction } from '../actions/getAndSetLoveCountServerAction';
 import LoveButtonComponent from './LoveButtonComponent';
 import { getGitHubStatsServerAction } from '../actions/getGitHubStatsServerAction';
@@ -36,6 +36,7 @@ const StatCard = ({
 );
 
 const Stats = async () => {
+  const setViews = await setViewsServerAction();
   const views = await getViewsServerAction();
   const loveCount = await getLoveCountServerAction();
   const githubStats = await getGitHubStatsServerAction();

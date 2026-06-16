@@ -9,27 +9,20 @@ const AboutMePage = () => {
   return (
     <>
       <PageHeader>
-        <PageHeaderHeading>About Aditya</PageHeaderHeading>
+        <PageHeaderHeading>About Aashish</PageHeaderHeading>
         <PageHeaderHeading className="mt-2 text-muted-foreground">
-          More than just a title—let’s dive deeper!
+          More than just a title—here's who I am.
         </PageHeaderHeading>
         <PageHeaderDescription>
-          I am a passionate Software Engineer with a knack for building
-          full-stack web applications using modern technologies like Next.js and
-          Tailwind CSS. My journey in tech began with a curiosity for solving
-          real-world problems through innovative solutions, which evolved into a
-          love for crafting user-centric digital experiences.
+          I am a Full-Stack Software Engineer who enjoys building scalable, production-ready applications from idea to deployment. My primary expertise lies in Next.js, React, TypeScript, Node.js, Express.js, MongoDB, and PostgreSQL, and I continuously expand my knowledge in Docker, Redis, AWS, CI/CD, and system design.
         </PageHeaderDescription>
 
         <PageHeaderDescription>
-          With a strong foundation in JavaScript frameworks, I focus on creating scalable, efficient, and visually appealing applications. Currently, I am diving deeper into backend development with Node.js and Express to expand my skill set and deliver powerful, server-side solutions.
+          Over the past few years, I have worked on projects including AI-powered applications, e-commerce platforms, job portals, and management systems, giving me experience across both frontend and backend development.
         </PageHeaderDescription>
 
         <PageHeaderDescription>
-          Beyond coding, I thrive in collaborative environments and enjoy
-          tackling challenging problems with creative solutions. I aim to
-          contribute to impactful projects that make a difference in users'
-          lives.
+          I enjoy learning new technologies, collaborating with teams, and taking on challenging problems that push me to become a better engineer. My goal is to contribute to impactful products while continuously growing as a software developer.
         </PageHeaderDescription>
       </PageHeader>
 

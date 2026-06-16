@@ -5,6 +5,7 @@ import {
   PageHeaderHeading,
 } from '@/components/page-header';
 import { Badge } from '@/components/ui/badge';
+import ProjectGallery from '@/components/project-gallery';
 
 import { siteConfig } from '@/config/site';
 import { ArrowLeftIcon, ExternalLinkIcon } from 'lucide-react';
@@ -56,6 +57,10 @@ const ProjectDetails = async ({
         <PageHeaderDescription>{project.tagline}</PageHeaderDescription>
         <PageHeaderDescription>{project.overview}</PageHeaderDescription>
       </PageHeader>
+
+      {project.images && (
+        <ProjectGallery images={project.images} title={project.title} />
+      )}
 
       <div id="badges" className="my-4">
         <h2 className="text-lg font-semibold">Tech Stack</h2>

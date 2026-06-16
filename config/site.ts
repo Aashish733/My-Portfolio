@@ -29,7 +29,7 @@ export const siteConfig = {
     githubProfile: 'https://github.com/aashish733',
     linkedin: 'https://www.linkedin.com/in/aashish909/',
     resume:
-      'https://drive.google.com/file/d/1cK9gNbw16_Zd2QynaGiH4DdJhaaQN_3U/view?usp=drive_link',
+      'https://drive.google.com/file/d/1PWaM3VfKO-RfF0J4CIM5iZJ4EO5Sdl49/view?usp=drive_link',
     email: 'mailto:aashish.kumar.ak2000@gmail.com',
     githubUsername: 'aashish733',
   },
