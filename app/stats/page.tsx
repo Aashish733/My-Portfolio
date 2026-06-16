@@ -36,7 +36,7 @@ const StatCard = ({
 );
 
 const Stats = async () => {
-  const setViews = await setViewsServerAction();
+  await setViewsServerAction();
   const views = await getViewsServerAction();
   const loveCount = await getLoveCountServerAction();
   const githubStats = await getGitHubStatsServerAction();
